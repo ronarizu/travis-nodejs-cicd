@@ -4,7 +4,8 @@
   "description": "example of nodejs api cicd using travis platform",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "set NODE_ENV=local&& nodemon server.js"
   },
   "repository": {
     "type": "git",
