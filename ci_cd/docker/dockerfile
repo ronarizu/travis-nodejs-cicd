@@ -1,0 +1,18 @@
+# base image
+FROM node:10
+
+# creation of the root folder inside the docker
+WORKDIR /app
+
+# proxies settings configuration
+
+
+# proxies configuration to npm repositories
+
+# copy all the application elements to the docker root folder
+COPY . ./
+
+# installing all the dependencies
+RUN npm install
+
+ENTRYPOINT ["npm", "run", $NODE_ENV]
