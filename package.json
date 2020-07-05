@@ -1,0 +1,25 @@
+{
+  "name": "travis-nodejs-cicd",
+  "version": "1.0.0",
+  "description": "example of nodejs api cicd using travis platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronarizu/travis-nodejs-cicd.git"
+  },
+  "author": "rariasz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronarizu/travis-nodejs-cicd/issues"
+  },
+  "homepage": "https://github.com/ronarizu/travis-nodejs-cicd#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
