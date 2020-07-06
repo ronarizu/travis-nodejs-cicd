@@ -10,11 +10,14 @@ services:
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
+  # overwriting the default option, we are installing the dependencies in the docker
+install: skip
+
   # create the docker image
 build:
   - docker build --build-arg DOCKER_ENV=local -f ci_cd/docker/dockerfile -t rariasz/travis-nodejs .
 
-  # pusth the image recenty created to docker hub
+  # push the image recenty created to docker hub
 deploy:
   provider: build
   script:
