@@ -13,7 +13,7 @@ before_install:
   # overwriting the default option, we are installing the dependencies in the docker
 install: skip
 
-test: skip
+script: echo "npm test temporarily disabled"
 
   # create the docker image
 build:
