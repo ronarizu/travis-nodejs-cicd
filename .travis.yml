@@ -1,3 +1,22 @@
+sudo: required
 language: node_js
 node_js:
   - lts/*
+
+services:
+  - docker
+
+  # setting the credentials to acess to docker hub
+before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+  # create the docker image
+build:
+  - docker build --build-arg DOCKER_ENV=local -f ci_cd/docker/dockerfile -t rariasz/travis-nodejs .
+
+  # pusth the image recenty created to docker hub
+deploy:
+  provider: build
+  script:
+    docker push rariasz/travis-nodejs;
+  branch: master
