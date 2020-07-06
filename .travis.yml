@@ -11,8 +11,6 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
   # overwriting the default option, we are installing the dependencies in the docker
-install: skip
-
 script: echo "npm test temporarily disabled"
 
   # create the docker image
